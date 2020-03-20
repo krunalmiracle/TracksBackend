@@ -51,8 +51,8 @@ public class Main {
 
     /**
      * Main method.
-     * @param args
-     * @throws IOException
+     * @param args - Argument
+     * @throws IOException -Throws IOException
      */
     public static void main(String[] args) throws IOException {
         final HttpServer server = startServer();
@@ -61,11 +61,16 @@ public class Main {
         server.getServerConfiguration().addHttpHandler(staticHttpHandler, "/");
 
 
-        System.out.println(String.format("Jersey app started with WADL available at "
-                + "%sapplication.wadl\nHit enter to stop it...", BASE_URI));
-
+       // System.out.println(String.format("Jersey app started with WADL available at "
+             //   + "%s application.wadl\nHit enter to stop it...", BASE_URI));
+        //Formatting BASE_URI FOR SWAGGER
+        String swagger_uri = BASE_URI;
+        String target = "/dsaApp";
+        String replacement = "";
+        swagger_uri = swagger_uri.replace(target, replacement);
+        System.out.println(String.format("RestApi Started at " + "%sswagger/\nHit enter to stop it...", swagger_uri));
         System.in.read();
-        server.stop();
+        server.shutdownNow();
     }
 }
 
