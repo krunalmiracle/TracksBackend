@@ -65,10 +65,10 @@ public class Main {
              //   + "%s application.wadl\nHit enter to stop it...", BASE_URI));
         //Formatting BASE_URI FOR SWAGGER
         String swagger_uri = BASE_URI;
-        String target = "/dsaApp";
-        String replacement = "";
+        String target = "dsaApp";
+        String replacement = "swagger";
         swagger_uri = swagger_uri.replace(target, replacement);
-        System.out.println(String.format("RestApi Started at " + "%sswagger/\nHit enter to stop it...", swagger_uri));
+        System.out.println(String.format("RestApi Started at " + "%s\nHit enter to stop it...", swagger_uri));
         System.in.read();
         server.shutdownNow();
     }

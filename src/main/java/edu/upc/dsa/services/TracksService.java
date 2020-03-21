@@ -1,9 +1,12 @@
 package edu.upc.dsa.services;
 
-
+//Services Manager
 import edu.upc.dsa.TracksManager;
 import edu.upc.dsa.TracksManagerImpl;
+//Models or Element Entity
 import edu.upc.dsa.models.Track;
+
+//Swagger Imports
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -29,8 +32,6 @@ public class TracksService {
             this.tm.addTrack("Despacito", "Luis Fonsi");
             this.tm.addTrack("Enter Sandman", "Metallica");
         }
-
-
     }
 
     @GET
@@ -48,7 +49,7 @@ public class TracksService {
         return Response.status(201).entity(entity).build()  ;
 
     }
-
+    //GETS A TRACK
     @GET
     @ApiOperation(value = "get a Track", notes = "asdasd")
     @ApiResponses(value = {
@@ -92,9 +93,7 @@ public class TracksService {
 
         return Response.status(201).build();
     }
-
-
-
+    //CREATES A NEW TRACK
     @POST
     @ApiOperation(value = "create a new Track", notes = "asdasd")
     @ApiResponses(value = {

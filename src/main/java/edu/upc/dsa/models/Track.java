@@ -4,9 +4,20 @@ import edu.upc.dsa.util.RandomUtils;
 
 public class Track {
 
+
     String id;
     String title;
     String singer;
+
+    public String getTest() {
+        return this.Test;
+    }
+
+    public void setTest(String test) {
+        this.Test = test;
+    }
+
+    String Test = "Yellow!"; //ALWAYS GENERATE GETTERS & SETTERS for JSON PARSING
     static int lastId;
 
     public Track() {
@@ -46,7 +57,7 @@ public class Track {
 
     @Override
     public String toString() {
-        return "Track [id="+id+", title=" + title + ", singer=" + singer +"]";
+        return "Track [id="+id+", title=" + title + ", singer=" + singer +", Test_Note="+ Test +"]";
     }
 
 }
