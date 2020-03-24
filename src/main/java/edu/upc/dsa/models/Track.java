@@ -8,16 +8,8 @@ public class Track {
     String id;
     String title;
     String singer;
+    String speed = "1x"; //Test Parameter ALWAYS GENERATE GETTERS & SETTERS for JSON PARSING
 
-    public String getTest() {
-        return this.Test;
-    }
-
-    public void setTest(String test) {
-        this.Test = test;
-    }
-
-    String Test = "Yellow!"; //ALWAYS GENERATE GETTERS & SETTERS for JSON PARSING
     static int lastId;
 
     public Track() {
@@ -55,9 +47,15 @@ public class Track {
         this.singer = singer;
     }
 
+    public String getSpeed() {  return this.speed;   }
+
+    public void setSpeed(String speed) {
+        this.speed = speed;
+    }
+
     @Override
     public String toString() {
-        return "Track [id="+id+", title=" + title + ", singer=" + singer +", Test_Note="+ Test +"]";
+        return "Track [id="+id+", title=" + title + ", singer=" + singer +", Test_Note="+ speed +"]";
     }
 
 }

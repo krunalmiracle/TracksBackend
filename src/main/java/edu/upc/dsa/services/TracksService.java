@@ -1,12 +1,10 @@
 package edu.upc.dsa.services;
 
 //Services Manager
+
 import edu.upc.dsa.TracksManager;
 import edu.upc.dsa.TracksManagerImpl;
-//Models or Element Entity
 import edu.upc.dsa.models.Track;
-
-//Swagger Imports
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -16,8 +14,10 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.util.ArrayList;
 import java.util.List;
+
+//Models or Element Entity
+//Swagger Imports
 
 @Api(value = "/tracks", description = "Endpoint to Track Service")
 @Path("/tracks")
@@ -35,7 +35,7 @@ public class TracksService {
     }
 
     @GET
-    @ApiOperation(value = "get all Track", notes = "asdasd")
+    @ApiOperation(value = "Get all Tracks", notes = "Retrieves the list of Object Track")
     @ApiResponses(value = {
             @ApiResponse(code = 201, message = "Successful", response = Track.class, responseContainer="List"),
     })
@@ -51,7 +51,7 @@ public class TracksService {
     }
     //GETS A TRACK
     @GET
-    @ApiOperation(value = "get a Track", notes = "asdasd")
+    @ApiOperation(value = "Get a Track", notes = "Retrieve Object Track")
     @ApiResponses(value = {
             @ApiResponse(code = 201, message = "Successful", response = Track.class),
             @ApiResponse(code = 404, message = "Track not found")
@@ -65,7 +65,7 @@ public class TracksService {
     }
 
     @DELETE
-    @ApiOperation(value = "delete a Track", notes = "asdasd")
+    @ApiOperation(value = "Delete a Track", notes = "Deletes an Object Track given id")
     @ApiResponses(value = {
             @ApiResponse(code = 201, message = "Successful"),
             @ApiResponse(code = 404, message = "Track not found")
@@ -79,7 +79,7 @@ public class TracksService {
     }
 
     @PUT
-    @ApiOperation(value = "update a Track", notes = "asdasd")
+    @ApiOperation(value = "Update a Track", notes = "Edits an existing Track")
     @ApiResponses(value = {
             @ApiResponse(code = 201, message = "Successful"),
             @ApiResponse(code = 404, message = "Track not found")
@@ -95,7 +95,7 @@ public class TracksService {
     }
     //CREATES A NEW TRACK
     @POST
-    @ApiOperation(value = "create a new Track", notes = "asdasd")
+    @ApiOperation(value = "create a new Track", notes = "Adds a new Track given object Track")
     @ApiResponses(value = {
             @ApiResponse(code = 201, message = "Successful", response=Track.class),
             @ApiResponse(code = 500, message = "Validation Error")
