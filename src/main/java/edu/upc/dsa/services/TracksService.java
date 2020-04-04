@@ -28,9 +28,10 @@ public class TracksService {
     public TracksService() {
         this.tm = TracksManagerImpl.getInstance();
         if (tm.size()==0) {
-            this.tm.addTrack("La Barbacoa", "Georgie Dann");
-            this.tm.addTrack("Despacito", "Luis Fonsi");
-            this.tm.addTrack("Enter Sandman", "Metallica");
+            this.tm.addTrack("Wings", "Macklemore x Ryan Lewis");
+            this.tm.addTrack("Crown", "Neffex");
+            this.tm.addTrack("My Way", "Frank Sinatra's");
+            this.tm.addTrack("Right Here, Right Now", "Fatboy Slim");
         }
     }
 
